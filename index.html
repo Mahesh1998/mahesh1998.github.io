@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile</title>
-<link rel="stylesheet" href="styles.css">
+    <title>
+        Connect4
+    </title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <div class="content" id="content">
 
-<div class="header">
-    <h1>My Profile</h1>
-</div>
+        <img class="logo" src="images/Connect_4_game_logo.png" id="logo">
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="hobbies.html">Hobbies</a>
-    <a href="resume.html">Resume</a>
-    <a id="toggle">Toggle</a>
-</div>
-<center>
-<div class="profile-picture">
-    <img src="photo.jpg" alt="Profile Picture" class="profile-image">
-</div>
-</center>
-<div class="bio">
-    <h2>Bio Information</h2>
-    <p>Name: Mahesh Maddineni</p>
-    <p>Age: 26</p>
-    <p>Current Location: Las Cruces, New Mexico, United States of America</p>
-    <p>Occupation: Student</p>
-    <p>Description: I am pursuing Master's in Computer Science at New Mexico State University</p>
-</div>
-
-<footer class="footer">
-    <div class="contact-info">
-        <p>Email: mahesh98@nmsu.edu</p>
-        <p>Phone: +5312705140</p>
+        <div class="gameData">
+            <div class="players-information" id="players-information">
+                <p id="player1Name"></p>
+                <p id="player2Name"></p>
+            </div>
+            <div class="connect4Board" id="connect4Board"></div>
+            <div class="game-over" id="game-over-form">
+                <form class="game-over-form-container game-over-hide" action="" id="game-over-data">
+                    <img src="images/game-over.jpg">
+                    <div class="winner-info" >
+                        <h1 id="winner-info"></h1>
+                    </div>
+                    <button type="submit" class="submit" id="play-again">Play Again</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="social-links">
-        <a href="https://github.com/Mahesh1998" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/maheshmaddineni/" target="_blank">LinkedIn</a> <br>
-        &copy; 2024 Mahesh Maddineni. All rights reserved.
+
+
+    <div class="players-form-popup" id="players-data-popup">
+        <form class="players-form-container" id="players-data">
+            <h1>Welcome to Connect4</h1>
+            <h2>Enter Players Information</h2>
+
+            <label><b>Player1 Name</b></label>
+            <input class="input-element" type="text" placeholder="Enter Player1 Name" name="player1" required><br>
+
+            <label><b>Player2 Name</b></label>
+            <input class="input-element" type="text" placeholder="Enter Player2 Name" name="player2" required><br>
+
+            <button type="button" class="submit" id="players-data-form-submit">Start Game</button>
+        </form>
     </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+<footer>
+
 </footer>
 
-<script>
-    document.getElementById("toggle").onclick = function(){
-     document.getElementsByTagName("body")[0].classList.toggle("dark");
-    };
-</script>
-</body>
 </html>
